@@ -30,4 +30,22 @@ describe('sayHello', function() {
     it('should return the string "Hello, Pat!" when executed', function() {
         expect(sayHello('Pat')).toBe("Hello, Pat!");
     });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello('World')).toBe("Hello, World!");
+    });
+    it('undefined should return the string "Sorry, not a string!" when executed', function() {
+        expect(sayHello('undefined')).toBe('Sorry, undefined not a string!');
+    });
+    it('NaN should return the string "Sorry, not a string!" when executed', function() {
+        expect(sayHello(NaN)).toBe('Sorry, NaN not a string!');
+    });
+    it('number should return the string "Sorry, not a string!" when executed', function() {
+        expect(sayHello(21)).toBe('Sorry, \'number\' not a string!');
+    });
+    it('boolean should return the string "Sorry, not a string!" when executed', function() {
+        expect(sayHello(true)).toBe('Sorry, \'boolean\' not a string!');
+    });
+    it('boolean should return the string "Sorry, not a string!" when executed', function() {
+        expect(sayHello(false)).toBe('Sorry, \'boolean\' not a string!');
+    });
 })
